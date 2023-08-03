@@ -1,5 +1,5 @@
 //
-//  Copyright (C) 2015 Google, Inc.
+//  Copyright (C) 2015 Google LLC
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -18,6 +18,9 @@ import GoogleMobileAds
 import UIKit
 
 class ViewController: UIViewController {
+
+  // The privacy settings button.
+  @IBOutlet weak var privacySettingsButton: UIBarButtonItem!
 
   // The view that holds the native ad.
   @IBOutlet weak var nativeAdPlaceholder: UIView!
@@ -53,11 +56,54 @@ class ViewController: UIViewController {
   /// The native custom format id
   let nativeCustomFormatId = "10104090"
 
+  @IBAction func privacySettingstapped(_ sender: UIBarButtonItem) {
+    GoogleMobileAdsConsentManager.shared.presentPrivacyOptionsForm(from: self) {
+      [weak self] formError in
+      guard let self, let formError else { return }
+
+      let alertController = UIAlertController(
+        title: formError.localizedDescription, message: "Please try again later.",
+        preferredStyle: .alert)
+      alertController.addAction(UIAlertAction(title: "OK", style: .cancel))
+      self.present(alertController, animated: true)
+    }
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
+
     versionLabel.text = GADGetStringFromVersionNumber(GADMobileAds.sharedInstance().versionNumber)
-    refreshAd(nil)
+
+    GoogleMobileAdsConsentManager.shared.gatherConsent(from: self) { [weak self] consentError in
+      guard let self else { return }
+
+      if let consentError {
+        // Consent gathering failed.
+        print("Error: \(consentError.localizedDescription)")
+      }
+
+      if GoogleMobileAdsConsentManager.shared.canRequestAds {
+        _ = self.startGoogleMobileAdsSDK
+      }
+
+      self.privacySettingsButton.isEnabled =
+        GoogleMobileAdsConsentManager.shared.isPrivacyOptionsRequired
+    }
+
+    // This sample attempts to load ads using consent obtained in the previous session.
+    if GoogleMobileAdsConsentManager.shared.canRequestAds {
+      _ = startGoogleMobileAdsSDK
+    }
   }
+
+  // The lazy property is used instead of unavailable `dispatch_once`.
+  private lazy var startGoogleMobileAdsSDK: Void = {
+    // Initialize the Google Mobile Ads SDK.
+    GADMobileAds.sharedInstance().start()
+
+    // Request an ad.
+    refreshAd(nil)
+  }()
 
   func setAdView(_ view: UIView) {
     // Remove the previous ad view.

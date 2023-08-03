@@ -1,4 +1,4 @@
-//  Copyright (c) 2015 Google. All rights reserved.
+//  Copyright (c) 2015 Google LLC. All rights reserved.
 
 #import "MySimpleNativeAdView.h"
 

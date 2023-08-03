@@ -1,4 +1,4 @@
-//  Copyright (c) 2015 Google. All rights reserved.
+//  Copyright (c) 2015 Google LLC. All rights reserved.
 
 #import <UIKit/UIKit.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>

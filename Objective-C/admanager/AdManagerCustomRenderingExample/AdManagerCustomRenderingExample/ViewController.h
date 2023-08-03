@@ -1,4 +1,4 @@
-//  Copyright (c) 2015 Google. All rights reserved.
+//  Copyright (c) 2015 Google LLC. All rights reserved.
 
 #import <UIKit/UIKit.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
@@ -6,6 +6,9 @@
 #import "MySimpleNativeAdView.h"
 
 @interface ViewController : UIViewController
+
+/// The privacy settings button.
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *privacySettingsButton;
 
 /// Container that holds the native ad.
 @property(nonatomic, weak) IBOutlet UIView *nativeAdPlaceholder;

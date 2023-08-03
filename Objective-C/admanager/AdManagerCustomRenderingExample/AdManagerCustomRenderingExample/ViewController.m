@@ -1,6 +1,8 @@
-//  Copyright (c) 2015 Google. All rights reserved.
+//  Copyright (c) 2015 Google LLC. All rights reserved.
 
 #import "ViewController.h"
+
+#import "GoogleMobileAdsConsentManager.h"
 
 static NSString *const TestAdUnit = @"/6499/example/native";
 static NSString *const TestNativeCustomTemplateID = @"10104090";
@@ -26,7 +28,67 @@ static NSString *const TestNativeCustomTemplateID = @"10104090";
 
   self.versionLabel.text = GADGetStringFromVersionNumber(GADMobileAds.sharedInstance.versionNumber);
 
-  [self refreshAd:nil];
+  __weak __typeof__(self) weakSelf = self;
+  [GoogleMobileAdsConsentManager.sharedInstance
+      gatherConsentFromConsentPresentationViewController:self
+                                consentGatheringComplete:^(NSError *_Nullable consentError) {
+                                  if (consentError) {
+                                    // Consent gathering failed.
+                                    NSLog(@"Error: %@", consentError.localizedDescription);
+                                  }
+
+                                  __strong __typeof__(self) strongSelf = weakSelf;
+                                  if (!strongSelf) {
+                                    return;
+                                  }
+
+                                  if (GoogleMobileAdsConsentManager.sharedInstance.canRequestAds) {
+                                    [strongSelf startGoogleMobileAdsSDK];
+                                  }
+
+                                  strongSelf.privacySettingsButton.enabled =
+                                      GoogleMobileAdsConsentManager.sharedInstance
+                                          .isPrivacyOptionsRequired;
+                                }];
+
+  // This sample attempts to load ads using consent obtained in the previous session.
+  if (GoogleMobileAdsConsentManager.sharedInstance.canRequestAds) {
+    [self startGoogleMobileAdsSDK];
+  }
+}
+
+- (void)startGoogleMobileAdsSDK {
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    // Initialize the Google Mobile Ads SDK.
+    [GADMobileAds.sharedInstance startWithCompletionHandler:nil];
+
+    // Request an ad.
+    [self refreshAd:nil];
+  });
+}
+
+- (IBAction)privacySettingsTapped:(UIBarButtonItem *)sender {
+  [GoogleMobileAdsConsentManager.sharedInstance
+      presentPrivacyOptionsFormFromViewController:self
+                                completionHandler:^(NSError *_Nullable formError) {
+                                  if (formError) {
+                                    UIAlertController *alertController = [UIAlertController
+                                        alertControllerWithTitle:formError.localizedDescription
+                                                         message:@"Please try again later."
+                                                  preferredStyle:UIAlertControllerStyleAlert];
+                                    UIAlertAction *defaultAction =
+                                        [UIAlertAction actionWithTitle:@"OK"
+                                                                 style:UIAlertActionStyleCancel
+                                                               handler:^(UIAlertAction *action){
+                                                               }];
+
+                                    [alertController addAction:defaultAction];
+                                    [self presentViewController:alertController
+                                                       animated:YES
+                                                     completion:nil];
+                                  }
+                                }];
 }
 
 - (IBAction)refreshAd:(id)sender {

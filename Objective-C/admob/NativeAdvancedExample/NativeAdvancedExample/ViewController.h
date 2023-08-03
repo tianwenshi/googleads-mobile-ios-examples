@@ -1,4 +1,4 @@
-// Copyright (C) 2015 Google, Inc.
+// Copyright (C) 2015 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,6 +16,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+
+/// The privacy settings button.
+@property (nonatomic, weak) IBOutlet UIBarButtonItem *privacySettingsButton;
 
 /// Container that holds the native ad.
 @property(nonatomic, weak) IBOutlet UIView *nativeAdPlaceholder;

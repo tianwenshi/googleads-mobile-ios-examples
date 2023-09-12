@@ -26,7 +26,14 @@
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Initialize Google Mobile Ads SDK
-  [[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
+//  [[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    NSURL *receiptURL = [mainBundle appStoreReceiptURL];
+    NSError *receiptError;
+    BOOL isPresent = [receiptURL checkResourceIsReachableAndReturnError:&receiptError];
+    if (!isPresent) {
+        // Validation fails
+    }
 
   return YES;
 }

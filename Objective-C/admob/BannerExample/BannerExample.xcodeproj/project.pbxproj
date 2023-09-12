@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28093B4A295AD87B00F31693 /* libboringssl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 28093B49295AD87B00F31693 /* libboringssl.tbd */; };
+		283E33082AB03E3100109B1D /* MaticooCustomEventBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 283E33072AB03E3100109B1D /* MaticooCustomEventBanner.m */; };
+		2853EC042959B55E003A3C03 /* GADMBannerApplins.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853EC022959B55E003A3C03 /* GADMBannerApplins.m */; };
+		CA03A11992E00698EAEA7841 /* libPods-BannerExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B56E0708553B94BAC87732 /* libPods-BannerExample.a */; };
 		CF86EE1D19787E6B00411520 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF86EE1C19787E6B00411520 /* main.m */; };
 		CF86EE2019787E6B00411520 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF86EE1F19787E6B00411520 /* AppDelegate.m */; };
 		CF86EE2319787E6B00411520 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF86EE2219787E6B00411520 /* ViewController.m */; };
@@ -15,6 +19,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28093B49295AD87B00F31693 /* libboringssl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libboringssl.tbd; path = usr/lib/libboringssl.tbd; sourceTree = SDKROOT; };
+		283E33062AB03E3100109B1D /* MaticooCustomEventBanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaticooCustomEventBanner.h; sourceTree = "<group>"; };
+		283E33072AB03E3100109B1D /* MaticooCustomEventBanner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaticooCustomEventBanner.m; sourceTree = "<group>"; };
+		2853EC022959B55E003A3C03 /* GADMBannerApplins.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADMBannerApplins.m; sourceTree = "<group>"; };
+		2853EC032959B55E003A3C03 /* GADMBannerApplins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMBannerApplins.h; sourceTree = "<group>"; };
+		637057CFE77D983DA5013091 /* Pods-BannerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BannerExample.release.xcconfig"; path = "Target Support Files/Pods-BannerExample/Pods-BannerExample.release.xcconfig"; sourceTree = "<group>"; };
+		85B56E0708553B94BAC87732 /* libPods-BannerExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BannerExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF86EE1719787E6B00411520 /* BannerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BannerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF86EE1B19787E6B00411520 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF86EE1C19787E6B00411520 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -24,6 +35,7 @@
 		CF86EE2219787E6B00411520 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CF86EE2519787E6B00411520 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF86EE2719787E6B00411520 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D91D5FDF27B5DD3AD5ACE2CE /* Pods-BannerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BannerExample.debug.xcconfig"; path = "Target Support Files/Pods-BannerExample/Pods-BannerExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28093B4A295AD87B00F31693 /* libboringssl.tbd in Frameworks */,
+				CA03A11992E00698EAEA7841 /* libPods-BannerExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA46BE99339AE4EDA883C10C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28093B49295AD87B00F31693 /* libboringssl.tbd */,
+				85B56E0708553B94BAC87732 /* libPods-BannerExample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA8248F913636E0B52B24F66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D91D5FDF27B5DD3AD5ACE2CE /* Pods-BannerExample.debug.xcconfig */,
+				637057CFE77D983DA5013091 /* Pods-BannerExample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CF86EE0E19787E6B00411520 = {
 			isa = PBXGroup;
 			children = (
 				CF86EE1919787E6B00411520 /* BannerExample */,
 				CF86EE1819787E6B00411520 /* Products */,
+				CA8248F913636E0B52B24F66 /* Pods */,
+				CA46BE99339AE4EDA883C10C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +90,8 @@
 		CF86EE1919787E6B00411520 /* BannerExample */ = {
 			isa = PBXGroup;
 			children = (
+				2853EC032959B55E003A3C03 /* GADMBannerApplins.h */,
+				2853EC022959B55E003A3C03 /* GADMBannerApplins.m */,
 				CF86EE1E19787E6B00411520 /* AppDelegate.h */,
 				CF86EE1F19787E6B00411520 /* AppDelegate.m */,
 				CF86EE2119787E6B00411520 /* ViewController.h */,
@@ -63,6 +99,8 @@
 				CF86EE2419787E6B00411520 /* Main.storyboard */,
 				CF86EE2719787E6B00411520 /* Images.xcassets */,
 				CF86EE1A19787E6B00411520 /* Supporting Files */,
+				283E33062AB03E3100109B1D /* MaticooCustomEventBanner.h */,
+				283E33072AB03E3100109B1D /* MaticooCustomEventBanner.m */,
 			);
 			path = BannerExample;
 			sourceTree = "<group>";
@@ -83,9 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF86EE3719787E6B00411520 /* Build configuration list for PBXNativeTarget "BannerExample" */;
 			buildPhases = (
+				D061E24EB40F0526529210A1 /* [CP] Check Pods Manifest.lock */,
 				CF86EE1319787E6B00411520 /* Sources */,
 				CF86EE1419787E6B00411520 /* Frameworks */,
 				CF86EE1519787E6B00411520 /* Resources */,
+				31D25B052BBB385CBE2364D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -107,6 +147,7 @@
 				TargetAttributes = {
 					CF86EE1619787E6B00411520 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = LAPXCLH73Q;
 					};
 				};
 			};
@@ -115,6 +156,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -140,11 +182,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		31D25B052BBB385CBE2364D2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BannerExample/Pods-BannerExample-resources.sh",
+				"${PODS_ROOT}/GoogleMobileAdsMediationTestSuite/Resources/GoogleMobileAdsMediationTestSuite.bundle",
+				"${PODS_ROOT}/MaterialComponents/components/Dialogs/src/MaterialDialogs.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents/MaterialIcons_ic_check_circle.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMobileAdsMediationTestSuite.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialDialogs.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons_ic_check_circle.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BannerExample/Pods-BannerExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D061E24EB40F0526529210A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BannerExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CF86EE1319787E6B00411520 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				283E33082AB03E3100109B1D /* MaticooCustomEventBanner.m in Sources */,
+				2853EC042959B55E003A3C03 /* GADMBannerApplins.m in Sources */,
 				CF86EE2319787E6B00411520 /* ViewController.m in Sources */,
 				CF86EE2019787E6B00411520 /* AppDelegate.m in Sources */,
 				CF86EE1D19787E6B00411520 /* main.m in Sources */,
@@ -254,12 +345,19 @@
 		};
 		CF86EE3819787E6B00411520 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D91D5FDF27B5DD3AD5ACE2CE /* Pods-BannerExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = LAPXCLH73Q;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = BannerExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BannerExample/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.google.example.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -267,12 +365,19 @@
 		};
 		CF86EE3919787E6B00411520 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 637057CFE77D983DA5013091 /* Pods-BannerExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = LAPXCLH73Q;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = BannerExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BannerExample/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.google.example.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

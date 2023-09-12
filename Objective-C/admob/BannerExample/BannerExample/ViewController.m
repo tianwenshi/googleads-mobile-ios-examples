@@ -17,21 +17,24 @@
 #import <GoogleMobileAds/GoogleMobileAds.h>
 
 #import "ViewController.h"
-
+@import GoogleMobileAdsMediationTestSuite;
 @implementation ViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
 
   // Replace this ad unit ID with your own ad unit ID.
-  self.bannerView.adUnitID = @"ca-app-pub-3940256099942544/2934735716";
+  self.bannerView.adUnitID = @"ca-app-pub-7727742383093512/4820370464";
   self.bannerView.rootViewController = self;
   GADRequest *request = [GADRequest request];
   // Requests test ads on devices you specify. Your test device ID is printed to the console when
   // an ad request is made. GADBannerView automatically returns test ads when running on a
   // simulator.
-  GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers = @[ GADSimulatorID ];
+  //GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers = @[ GADSimulatorID ];
   [self.bannerView loadRequest:request];
+    
+  //[GoogleMobileAdsMediationTestSuite presentOnViewController:self delegate:nil];
+    
 }
 
 @end

@@ -4,4 +4,7 @@ platform :ios, '10.0'
 
 target 'BannerExample' do
   pod 'Google-Mobile-Ads-SDK'
+  pod 'ApplinsSDK'
+  pod 'GoogleMobileAdsMediationTestSuite'
+  pod 'zMaticoo'
 end

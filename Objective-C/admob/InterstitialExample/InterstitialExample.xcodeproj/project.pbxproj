@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28FB8F05295E8F4200FA92F9 /* GADMInterstitialApplins.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FB8F04295E8F4200FA92F9 /* GADMInterstitialApplins.m */; };
+		4C15558082E95FA5FA815194 /* libPods-InterstitialExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D93BD7CDCE65523DB4CBF0 /* libPods-InterstitialExample.a */; };
 		CF9F261F1991396300F5C44E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F261E1991396300F5C44E /* main.m */; };
 		CF9F26221991396300F5C44E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F26211991396300F5C44E /* AppDelegate.m */; };
 		CF9F26251991396300F5C44E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F26241991396300F5C44E /* ViewController.m */; };
@@ -15,6 +17,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28FB8F03295E8F4200FA92F9 /* GADMInterstitialApplins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMInterstitialApplins.h; sourceTree = "<group>"; };
+		28FB8F04295E8F4200FA92F9 /* GADMInterstitialApplins.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADMInterstitialApplins.m; sourceTree = "<group>"; };
+		76D93BD7CDCE65523DB4CBF0 /* libPods-InterstitialExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InterstitialExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6AACAA8C87EB9E27BCDB8C1 /* Pods-InterstitialExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterstitialExample.debug.xcconfig"; path = "Target Support Files/Pods-InterstitialExample/Pods-InterstitialExample.debug.xcconfig"; sourceTree = "<group>"; };
+		B830B66A57B11BDEF759318A /* Pods-InterstitialExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterstitialExample.release.xcconfig"; path = "Target Support Files/Pods-InterstitialExample/Pods-InterstitialExample.release.xcconfig"; sourceTree = "<group>"; };
 		CF9F26191991396300F5C44E /* InterstitialExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterstitialExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9F261D1991396300F5C44E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF9F261E1991396300F5C44E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -31,17 +38,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C15558082E95FA5FA815194 /* libPods-InterstitialExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BCA0104E6565C534FC02601 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76D93BD7CDCE65523DB4CBF0 /* libPods-InterstitialExample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7D875C0FF84E3FF3FBEC0ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6AACAA8C87EB9E27BCDB8C1 /* Pods-InterstitialExample.debug.xcconfig */,
+				B830B66A57B11BDEF759318A /* Pods-InterstitialExample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CF9F26101991396300F5C44E = {
 			isa = PBXGroup;
 			children = (
 				CF9F261B1991396300F5C44E /* InterstitialExample */,
 				CF9F261A1991396300F5C44E /* Products */,
+				B7D875C0FF84E3FF3FBEC0ED /* Pods */,
+				4BCA0104E6565C534FC02601 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +83,8 @@
 		CF9F261B1991396300F5C44E /* InterstitialExample */ = {
 			isa = PBXGroup;
 			children = (
+				28FB8F03295E8F4200FA92F9 /* GADMInterstitialApplins.h */,
+				28FB8F04295E8F4200FA92F9 /* GADMInterstitialApplins.m */,
 				CF9F26201991396300F5C44E /* AppDelegate.h */,
 				CF9F26211991396300F5C44E /* AppDelegate.m */,
 				CF9F26231991396300F5C44E /* ViewController.h */,
@@ -83,6 +112,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF9F26391991396400F5C44E /* Build configuration list for PBXNativeTarget "InterstitialExample" */;
 			buildPhases = (
+				612F04B48B42662DA0BE972D /* [CP] Check Pods Manifest.lock */,
 				CF9F26151991396300F5C44E /* Sources */,
 				CF9F26161991396300F5C44E /* Frameworks */,
 				CF9F26171991396300F5C44E /* Resources */,
@@ -107,6 +137,7 @@
 				TargetAttributes = {
 					CF9F26181991396300F5C44E = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = LAPXCLH73Q;
 					};
 				};
 			};
@@ -115,6 +146,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -140,11 +172,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		612F04B48B42662DA0BE972D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InterstitialExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CF9F26151991396300F5C44E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28FB8F05295E8F4200FA92F9 /* GADMInterstitialApplins.m in Sources */,
 				CF9F26251991396300F5C44E /* ViewController.m in Sources */,
 				CF9F26221991396300F5C44E /* AppDelegate.m in Sources */,
 				CF9F261F1991396300F5C44E /* main.m in Sources */,
@@ -254,9 +312,12 @@
 		};
 		CF9F263A1991396400F5C44E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6AACAA8C87EB9E27BCDB8C1 /* Pods-InterstitialExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = LAPXCLH73Q;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = InterstitialExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -267,9 +328,12 @@
 		};
 		CF9F263B1991396400F5C44E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B830B66A57B11BDEF759318A /* Pods-InterstitialExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = LAPXCLH73Q;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = InterstitialExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

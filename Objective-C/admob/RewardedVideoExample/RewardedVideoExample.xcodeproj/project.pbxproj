@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		283E33162AB06D5500109B1D /* MaticooCustomEventRewardedVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 283E33152AB06D5500109B1D /* MaticooCustomEventRewardedVideo.m */; };
 		84E184631B30D695002ADFFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E184621B30D695002ADFFB /* main.m */; };
 		84E184661B30D695002ADFFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E184651B30D695002ADFFB /* AppDelegate.m */; };
 		84E184691B30D695002ADFFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E184681B30D695002ADFFB /* ViewController.m */; };
 		84E1846C1B30D695002ADFFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E1846A1B30D695002ADFFB /* Main.storyboard */; };
 		84E1846E1B30D695002ADFFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E1846D1B30D695002ADFFB /* Images.xcassets */; };
 		84E184711B30D695002ADFFB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E1846F1B30D695002ADFFB /* LaunchScreen.xib */; };
+		9861CE2C59D81476632E2030 /* libPods-RewardedVideoExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74BAE5ED3557FA850CC22146 /* libPods-RewardedVideoExample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		283E33142AB06D5500109B1D /* MaticooCustomEventRewardedVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaticooCustomEventRewardedVideo.h; sourceTree = "<group>"; };
+		283E33152AB06D5500109B1D /* MaticooCustomEventRewardedVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaticooCustomEventRewardedVideo.m; sourceTree = "<group>"; };
+		55FFE1FAAE5B58D410D7107B /* Pods-RewardedVideoExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RewardedVideoExample.debug.xcconfig"; path = "Target Support Files/Pods-RewardedVideoExample/Pods-RewardedVideoExample.debug.xcconfig"; sourceTree = "<group>"; };
+		74BAE5ED3557FA850CC22146 /* libPods-RewardedVideoExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RewardedVideoExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E1845D1B30D695002ADFFB /* RewardedVideoExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RewardedVideoExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E184611B30D695002ADFFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84E184621B30D695002ADFFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -26,6 +32,7 @@
 		84E1846B1B30D695002ADFFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84E1846D1B30D695002ADFFB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		84E184701B30D695002ADFFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C91CA6F4006363A94E1E5455 /* Pods-RewardedVideoExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RewardedVideoExample.release.xcconfig"; path = "Target Support Files/Pods-RewardedVideoExample/Pods-RewardedVideoExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9861CE2C59D81476632E2030 /* libPods-RewardedVideoExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +50,8 @@
 		60CDAD0F9778498876AB6809 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				55FFE1FAAE5B58D410D7107B /* Pods-RewardedVideoExample.debug.xcconfig */,
+				C91CA6F4006363A94E1E5455 /* Pods-RewardedVideoExample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -52,6 +62,7 @@
 				84E1845F1B30D695002ADFFB /* RewardedVideoExample */,
 				84E1845E1B30D695002ADFFB /* Products */,
 				60CDAD0F9778498876AB6809 /* Pods */,
+				C6AE1AB898F75F4130E0CD43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +85,8 @@
 				84E1846D1B30D695002ADFFB /* Images.xcassets */,
 				84E1846F1B30D695002ADFFB /* LaunchScreen.xib */,
 				84E184601B30D695002ADFFB /* Supporting Files */,
+				283E33142AB06D5500109B1D /* MaticooCustomEventRewardedVideo.h */,
+				283E33152AB06D5500109B1D /* MaticooCustomEventRewardedVideo.m */,
 			);
 			path = RewardedVideoExample;
 			sourceTree = "<group>";
@@ -87,6 +100,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C6AE1AB898F75F4130E0CD43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74BAE5ED3557FA850CC22146 /* libPods-RewardedVideoExample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,6 +115,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84E184801B30D695002ADFFB /* Build configuration list for PBXNativeTarget "RewardedVideoExample" */;
 			buildPhases = (
+				82FBA3714D62763313ACB6CF /* [CP] Check Pods Manifest.lock */,
 				84E184591B30D695002ADFFB /* Sources */,
 				84E1845A1B30D695002ADFFB /* Frameworks */,
 				84E1845B1B30D695002ADFFB /* Resources */,
@@ -118,6 +140,7 @@
 				TargetAttributes = {
 					84E1845C1B30D695002ADFFB = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 32Z4FX6L9H;
 					};
 				};
 			};
@@ -153,6 +176,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		82FBA3714D62763313ACB6CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RewardedVideoExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84E184591B30D695002ADFFB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -160,6 +208,7 @@
 			files = (
 				84E184691B30D695002ADFFB /* ViewController.m in Sources */,
 				84E184661B30D695002ADFFB /* AppDelegate.m in Sources */,
+				283E33162AB06D5500109B1D /* MaticooCustomEventRewardedVideo.m in Sources */,
 				84E184631B30D695002ADFFB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,9 +326,12 @@
 		};
 		84E184811B30D695002ADFFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55FFE1FAAE5B58D410D7107B /* Pods-RewardedVideoExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAssets;
+				DEVELOPMENT_TEAM = 32Z4FX6L9H;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = RewardedVideoExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -290,9 +342,12 @@
 		};
 		84E184821B30D695002ADFFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C91CA6F4006363A94E1E5455 /* Pods-RewardedVideoExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAssets;
+				DEVELOPMENT_TEAM = 32Z4FX6L9H;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = RewardedVideoExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -19,7 +19,7 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-1946898215210279~5193172966</string>
+	<string>ca-app-pub-7727742383093512~6600355998</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -27,6 +27,8 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>need your ad</string>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>
@@ -170,5 +172,7 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>zMaticooAppKey</key>
+	<string>92146afafae3a51dde3e53ec407287a781595a224e6dc606a6aad8ed3f863a4b</string>
 </dict>
 </plist>

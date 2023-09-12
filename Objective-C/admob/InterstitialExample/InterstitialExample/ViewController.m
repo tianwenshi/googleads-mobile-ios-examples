@@ -89,7 +89,7 @@ static const NSInteger kGameLength = 5;
 - (void)loadInterstitial {
   GADRequest *request = [GADRequest request];
   [GADInterstitialAd
-       loadWithAdUnitID:@"ca-app-pub-1946898215210279/7958655576"
+       loadWithAdUnitID:@"ca-app-pub-7727742383093512/3426601580"
                 request:request
       completionHandler:^(GADInterstitialAd *ad, NSError *error) {
         if (error) {

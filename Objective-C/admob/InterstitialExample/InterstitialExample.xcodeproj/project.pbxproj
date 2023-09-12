@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		283E33132AB0642500109B1D /* MaticooCustomEventInterstitial.m in Sources */ = {isa = PBXBuildFile; fileRef = 283E33122AB0642500109B1D /* MaticooCustomEventInterstitial.m */; };
 		28FB8F05295E8F4200FA92F9 /* GADMInterstitialApplins.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FB8F04295E8F4200FA92F9 /* GADMInterstitialApplins.m */; };
 		4C15558082E95FA5FA815194 /* libPods-InterstitialExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D93BD7CDCE65523DB4CBF0 /* libPods-InterstitialExample.a */; };
 		CF9F261F1991396300F5C44E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F261E1991396300F5C44E /* main.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		283E33112AB0642500109B1D /* MaticooCustomEventInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooCustomEventInterstitial.h; sourceTree = "<group>"; };
+		283E33122AB0642500109B1D /* MaticooCustomEventInterstitial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooCustomEventInterstitial.m; sourceTree = "<group>"; };
 		28FB8F03295E8F4200FA92F9 /* GADMInterstitialApplins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMInterstitialApplins.h; sourceTree = "<group>"; };
 		28FB8F04295E8F4200FA92F9 /* GADMInterstitialApplins.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADMInterstitialApplins.m; sourceTree = "<group>"; };
 		76D93BD7CDCE65523DB4CBF0 /* libPods-InterstitialExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InterstitialExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +92,8 @@
 				CF9F26211991396300F5C44E /* AppDelegate.m */,
 				CF9F26231991396300F5C44E /* ViewController.h */,
 				CF9F26241991396300F5C44E /* ViewController.m */,
+				283E33112AB0642500109B1D /* MaticooCustomEventInterstitial.h */,
+				283E33122AB0642500109B1D /* MaticooCustomEventInterstitial.m */,
 				CF9F26261991396300F5C44E /* Main.storyboard */,
 				CF9F26291991396400F5C44E /* Images.xcassets */,
 				CF9F261C1991396300F5C44E /* Supporting Files */,
@@ -202,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				283E33132AB0642500109B1D /* MaticooCustomEventInterstitial.m in Sources */,
 				28FB8F05295E8F4200FA92F9 /* GADMInterstitialApplins.m in Sources */,
 				CF9F26251991396300F5C44E /* ViewController.m in Sources */,
 				CF9F26221991396300F5C44E /* AppDelegate.m in Sources */,

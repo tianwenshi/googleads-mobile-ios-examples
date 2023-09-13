@@ -1,5 +1,6 @@
 #import "MaticooCustomEventInterstitial.h"
 #include <stdatomic.h>
+#include "MaticooMediationTrackManager.h"
 @import MaticooSDK;
 
 @interface MaticooCustomEventInterstitial () <GADMediationAdapter, GADMediationInterstitialAd, MATInterstitialAdDelegate> {
@@ -30,8 +31,10 @@
       }else{
           [[MaticooAds shareSDK] initSDK:appkey onSuccess:^{
               completionHandler(nil);
+              [MaticooMediationTrackManager trackMediationInitSuccess];
           } onError:^(NSError * _Nonnull error) {
               completionHandler(error);
+              [MaticooMediationTrackManager trackMediationInitFailed:error];
           }];
       }
 }
@@ -80,6 +83,7 @@
     _interstitial = [[MATInterstitialAd alloc] initWithPlacementID:adUnit];
     _interstitial.delegate = self;
     [_interstitial loadAd];
+    [MaticooMediationTrackManager trackMediationAdRequest:adUnit adType:INTERSTITIAL isAutoRefresh:NO];
 }
 
 #pragma mark GADMediationInterstitialAd implementation
@@ -95,19 +99,23 @@
 
 - (void)interstitialAdDidLoad:(MATInterstitialAd *)interstitialAd{
     _adEventDelegate = _loadCompletionHandler(self, nil);
+    [MaticooMediationTrackManager trackMediationAdRequestFilled:interstitialAd.placementID adType:INTERSTITIAL];
 }
 
 - (void)interstitialAd:(MATInterstitialAd *)interstitialAd didFailWithError:(NSError *)error{
     _adEventDelegate = _loadCompletionHandler(nil, error);
+    [MaticooMediationTrackManager trackMediationAdRequestFailed:interstitialAd.placementID adType:INTERSTITIAL];
 }
 
 - (void)interstitialAdWillLogImpression:(MATInterstitialAd *)interstitialAd{
     [_adEventDelegate willPresentFullScreenView];
     [_adEventDelegate reportImpression];
+    [MaticooMediationTrackManager trackMediationAdImp:interstitialAd.placementID adType:INTERSTITIAL];
 }
 
 - (void)interstitialAdDidClick:(MATInterstitialAd *)interstitialAd{
     [_adEventDelegate reportClick];
+    [MaticooMediationTrackManager trackMediationAdClick:interstitialAd.placementID adType:INTERSTITIAL];
 }
 
 //did click close button
@@ -117,5 +125,6 @@
 
 - (void)interstitialAd:(MATInterstitialAd *)interstitialAd displayFailWithError:(NSError *)error{
     [_adEventDelegate didFailToPresentWithError:error];
+    [MaticooMediationTrackManager trackMediationAdImpFailed:interstitialAd.placementID adType:INTERSTITIAL];
 }
 @end

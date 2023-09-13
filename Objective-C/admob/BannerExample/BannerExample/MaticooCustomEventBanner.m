@@ -11,6 +11,13 @@
 #include <stdatomic.h>
 #include "MaticooMediationTrackManager.h"
 
+#define dispatch_main_MATAdapter_ASYNC_safe(block)\
+        if ([NSThread isMainThread]) {\
+        block();\
+        } else {\
+        dispatch_async(dispatch_get_main_queue(), block);\
+        }
+
 @interface MaticooCustomEventBanner () <GADMediationAdapter, GADMediationBannerAd, MATBannerAdDelegate> {
   /// The sample banner ad.
   MATBannerAd *_bannerAd;
@@ -89,6 +96,7 @@
           _adEventDelegate = _loadCompletionHandler(nil, error);
       }else{
           [[MaticooAds shareSDK] initSDK:appkey onSuccess:^{
+              dispatch_main_MATAdapter_ASYNC_safe(^{
                   NSString *adUnit = adConfiguration.credentials.settings[@"parameter"];
                   _bannerAd = [[MATBannerAd alloc] initWithPlacementID:adUnit];
                   _bannerAd.delegate = self;
@@ -96,7 +104,7 @@
                   _bannerAd.frame = CGRectMake(0, 0, adConfiguration.adSize.size.width, adConfiguration.adSize.size.height);
                   [MaticooMediationTrackManager trackMediationInitSuccess];
                   [MaticooMediationTrackManager trackMediationAdRequest:adUnit adType:BANNER isAutoRefresh:NO];
-              
+              });
           } onError:^(NSError * _Nonnull error) {
               _adEventDelegate = _loadCompletionHandler(nil, error);
               [MaticooMediationTrackManager trackMediationInitFailed:error];

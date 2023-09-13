@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		28093B4A295AD87B00F31693 /* libboringssl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 28093B49295AD87B00F31693 /* libboringssl.tbd */; };
 		283E33082AB03E3100109B1D /* MaticooCustomEventBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 283E33072AB03E3100109B1D /* MaticooCustomEventBanner.m */; };
+		283E33222AB156FD00109B1D /* MaticooMediationNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 283E331C2AB156FD00109B1D /* MaticooMediationNetwork.m */; };
+		283E33232AB156FD00109B1D /* MaticooMediationTrackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 283E331E2AB156FD00109B1D /* MaticooMediationTrackManager.m */; };
+		283E33242AB156FD00109B1D /* MaticooMediationURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 283E331F2AB156FD00109B1D /* MaticooMediationURLSession.m */; };
 		2853EC042959B55E003A3C03 /* GADMBannerApplins.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853EC022959B55E003A3C03 /* GADMBannerApplins.m */; };
 		CA03A11992E00698EAEA7841 /* libPods-BannerExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B56E0708553B94BAC87732 /* libPods-BannerExample.a */; };
 		CF86EE1D19787E6B00411520 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF86EE1C19787E6B00411520 /* main.m */; };
@@ -22,6 +25,12 @@
 		28093B49295AD87B00F31693 /* libboringssl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libboringssl.tbd; path = usr/lib/libboringssl.tbd; sourceTree = SDKROOT; };
 		283E33062AB03E3100109B1D /* MaticooCustomEventBanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaticooCustomEventBanner.h; sourceTree = "<group>"; };
 		283E33072AB03E3100109B1D /* MaticooCustomEventBanner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaticooCustomEventBanner.m; sourceTree = "<group>"; };
+		283E331B2AB156FD00109B1D /* MaticooMediationNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooMediationNetwork.h; sourceTree = "<group>"; };
+		283E331C2AB156FD00109B1D /* MaticooMediationNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationNetwork.m; sourceTree = "<group>"; };
+		283E331D2AB156FD00109B1D /* MaticooMediationURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooMediationURLSession.h; sourceTree = "<group>"; };
+		283E331E2AB156FD00109B1D /* MaticooMediationTrackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationTrackManager.m; sourceTree = "<group>"; };
+		283E331F2AB156FD00109B1D /* MaticooMediationURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationURLSession.m; sourceTree = "<group>"; };
+		283E33202AB156FD00109B1D /* MaticooMediationTrackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooMediationTrackManager.h; sourceTree = "<group>"; };
 		2853EC022959B55E003A3C03 /* GADMBannerApplins.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADMBannerApplins.m; sourceTree = "<group>"; };
 		2853EC032959B55E003A3C03 /* GADMBannerApplins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMBannerApplins.h; sourceTree = "<group>"; };
 		637057CFE77D983DA5013091 /* Pods-BannerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BannerExample.release.xcconfig"; path = "Target Support Files/Pods-BannerExample/Pods-BannerExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +110,12 @@
 				CF86EE1A19787E6B00411520 /* Supporting Files */,
 				283E33062AB03E3100109B1D /* MaticooCustomEventBanner.h */,
 				283E33072AB03E3100109B1D /* MaticooCustomEventBanner.m */,
+				283E331B2AB156FD00109B1D /* MaticooMediationNetwork.h */,
+				283E331C2AB156FD00109B1D /* MaticooMediationNetwork.m */,
+				283E33202AB156FD00109B1D /* MaticooMediationTrackManager.h */,
+				283E331E2AB156FD00109B1D /* MaticooMediationTrackManager.m */,
+				283E331D2AB156FD00109B1D /* MaticooMediationURLSession.h */,
+				283E331F2AB156FD00109B1D /* MaticooMediationURLSession.m */,
 			);
 			path = BannerExample;
 			sourceTree = "<group>";
@@ -236,6 +251,9 @@
 			files = (
 				283E33082AB03E3100109B1D /* MaticooCustomEventBanner.m in Sources */,
 				2853EC042959B55E003A3C03 /* GADMBannerApplins.m in Sources */,
+				283E33232AB156FD00109B1D /* MaticooMediationTrackManager.m in Sources */,
+				283E33222AB156FD00109B1D /* MaticooMediationNetwork.m in Sources */,
+				283E33242AB156FD00109B1D /* MaticooMediationURLSession.m in Sources */,
 				CF86EE2319787E6B00411520 /* ViewController.m in Sources */,
 				CF86EE2019787E6B00411520 /* AppDelegate.m in Sources */,
 				CF86EE1D19787E6B00411520 /* main.m in Sources */,

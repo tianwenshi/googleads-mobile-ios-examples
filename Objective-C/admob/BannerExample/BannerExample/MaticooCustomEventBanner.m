@@ -9,6 +9,7 @@
 #import "MaticooCustomEventBanner.h"
 @import MaticooSDK;
 #include <stdatomic.h>
+#include "MaticooMediationTrackManager.h"
 
 @interface MaticooCustomEventBanner () <GADMediationAdapter, GADMediationBannerAd, MATBannerAdDelegate> {
   /// The sample banner ad.
@@ -35,9 +36,11 @@
           completionHandler(error);
       }else{
           [[MaticooAds shareSDK] initSDK:appkey onSuccess:^{
-                      completionHandler(nil);
-                  } onError:^(NSError * _Nonnull error) {
-                      completionHandler(error);
+              completionHandler(nil);
+              [MaticooMediationTrackManager trackMediationInitSuccess];
+          } onError:^(NSError * _Nonnull error) {
+              completionHandler(error);
+              [MaticooMediationTrackManager trackMediationInitFailed:error];
           }];
       }
 }
@@ -91,8 +94,12 @@
                   _bannerAd.delegate = self;
                   [_bannerAd loadAd];
                   _bannerAd.frame = CGRectMake(0, 0, adConfiguration.adSize.size.width, adConfiguration.adSize.size.height);
+                  [MaticooMediationTrackManager trackMediationInitSuccess];
+                  [MaticooMediationTrackManager trackMediationAdRequest:adUnit adType:BANNER isAutoRefresh:NO];
+              
           } onError:^(NSError * _Nonnull error) {
               _adEventDelegate = _loadCompletionHandler(nil, error);
+              [MaticooMediationTrackManager trackMediationInitFailed:error];
           }];
       }
 }
@@ -106,18 +113,22 @@
 - (void)bannerAdDidLoad:(MATBannerAd *)nativeBannerAd{
     _bannerAd = nativeBannerAd;
     _adEventDelegate = _loadCompletionHandler(self, nil);
+    [MaticooMediationTrackManager trackMediationAdRequestFilled:nativeBannerAd.placementID adType:BANNER];
 }
 
 - (void)bannerAd:(nonnull MATBannerAd *)nativeBannerAd didFailWithError:(nonnull NSError *)error {
     _adEventDelegate = _loadCompletionHandler(nil, error);
+    [MaticooMediationTrackManager trackMediationAdRequestFailed:nativeBannerAd.placementID adType:BANNER];
 }
 
 - (void)bannerAdDidClick:(nonnull MATBannerAd *)banner {
     [_adEventDelegate reportClick];
+    [MaticooMediationTrackManager trackMediationAdClick:banner.placementID adType:BANNER];
 }
 
 - (void)bannerAdDidImpression:(nonnull MATBannerAd *)banner {
     [_adEventDelegate reportImpression];
+    [MaticooMediationTrackManager trackMediationAdImp:banner.placementID adType:BANNER];
 }
 
 - (void)bannerAdDismissed:(nonnull MATBannerAd *)bannerAd{

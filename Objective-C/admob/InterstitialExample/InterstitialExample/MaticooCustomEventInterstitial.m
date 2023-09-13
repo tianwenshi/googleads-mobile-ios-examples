@@ -91,6 +91,7 @@
 - (void)presentFromViewController:(UIViewController *)viewController {
     if (_interstitial && _interstitial.isReady) {
         [_interstitial showAdFromViewController:viewController];
+        [MaticooMediationTrackManager trackMediationAdShow:_interstitial.placementID adType:INTERSTITIAL];
     }
 }
 

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		283E33162AB06D5500109B1D /* MaticooCustomEventRewardedVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 283E33152AB06D5500109B1D /* MaticooCustomEventRewardedVideo.m */; };
+		283E33352AB1628800109B1D /* MaticooMediationNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 283E332F2AB1628800109B1D /* MaticooMediationNetwork.m */; };
+		283E33362AB1628800109B1D /* MaticooMediationURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 283E33312AB1628800109B1D /* MaticooMediationURLSession.m */; };
+		283E33372AB1628800109B1D /* MaticooMediationTrackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 283E33342AB1628800109B1D /* MaticooMediationTrackManager.m */; };
 		84E184631B30D695002ADFFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E184621B30D695002ADFFB /* main.m */; };
 		84E184661B30D695002ADFFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E184651B30D695002ADFFB /* AppDelegate.m */; };
 		84E184691B30D695002ADFFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E184681B30D695002ADFFB /* ViewController.m */; };
@@ -20,6 +23,12 @@
 /* Begin PBXFileReference section */
 		283E33142AB06D5500109B1D /* MaticooCustomEventRewardedVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaticooCustomEventRewardedVideo.h; sourceTree = "<group>"; };
 		283E33152AB06D5500109B1D /* MaticooCustomEventRewardedVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaticooCustomEventRewardedVideo.m; sourceTree = "<group>"; };
+		283E332F2AB1628800109B1D /* MaticooMediationNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationNetwork.m; sourceTree = "<group>"; };
+		283E33302AB1628800109B1D /* MaticooMediationURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooMediationURLSession.h; sourceTree = "<group>"; };
+		283E33312AB1628800109B1D /* MaticooMediationURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationURLSession.m; sourceTree = "<group>"; };
+		283E33322AB1628800109B1D /* MaticooMediationTrackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooMediationTrackManager.h; sourceTree = "<group>"; };
+		283E33332AB1628800109B1D /* MaticooMediationNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooMediationNetwork.h; sourceTree = "<group>"; };
+		283E33342AB1628800109B1D /* MaticooMediationTrackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationTrackManager.m; sourceTree = "<group>"; };
 		55FFE1FAAE5B58D410D7107B /* Pods-RewardedVideoExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RewardedVideoExample.debug.xcconfig"; path = "Target Support Files/Pods-RewardedVideoExample/Pods-RewardedVideoExample.debug.xcconfig"; sourceTree = "<group>"; };
 		74BAE5ED3557FA850CC22146 /* libPods-RewardedVideoExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RewardedVideoExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E1845D1B30D695002ADFFB /* RewardedVideoExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RewardedVideoExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +96,12 @@
 				84E184601B30D695002ADFFB /* Supporting Files */,
 				283E33142AB06D5500109B1D /* MaticooCustomEventRewardedVideo.h */,
 				283E33152AB06D5500109B1D /* MaticooCustomEventRewardedVideo.m */,
+				283E33332AB1628800109B1D /* MaticooMediationNetwork.h */,
+				283E332F2AB1628800109B1D /* MaticooMediationNetwork.m */,
+				283E33322AB1628800109B1D /* MaticooMediationTrackManager.h */,
+				283E33342AB1628800109B1D /* MaticooMediationTrackManager.m */,
+				283E33302AB1628800109B1D /* MaticooMediationURLSession.h */,
+				283E33312AB1628800109B1D /* MaticooMediationURLSession.m */,
 			);
 			path = RewardedVideoExample;
 			sourceTree = "<group>";
@@ -208,7 +223,10 @@
 			files = (
 				84E184691B30D695002ADFFB /* ViewController.m in Sources */,
 				84E184661B30D695002ADFFB /* AppDelegate.m in Sources */,
+				283E33372AB1628800109B1D /* MaticooMediationTrackManager.m in Sources */,
+				283E33362AB1628800109B1D /* MaticooMediationURLSession.m in Sources */,
 				283E33162AB06D5500109B1D /* MaticooCustomEventRewardedVideo.m in Sources */,
+				283E33352AB1628800109B1D /* MaticooMediationNetwork.m in Sources */,
 				84E184631B30D695002ADFFB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

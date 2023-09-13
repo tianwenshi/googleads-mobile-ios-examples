@@ -8,6 +8,7 @@
 
 #import "MaticooCustomEventRewardedVideo.h"
 #include <stdatomic.h>
+#include "MaticooMediationTrackManager.h"
 @import MaticooSDK;
 
 @interface MaticooCustomEventRewardedVideo () <MATRewardedVideoAdDelegate, GADMediationRewardedAd, GADMediationAdapter> {
@@ -36,8 +37,10 @@
     }else{
         [[MaticooAds shareSDK] initSDK:appkey onSuccess:^{
             completionHandler(nil);
+            [MaticooMediationTrackManager trackMediationInitSuccess];
         } onError:^(NSError * _Nonnull error) {
             completionHandler(error);
+            [MaticooMediationTrackManager trackMediationInitFailed:error];
         }];
     }
 }
@@ -86,6 +89,7 @@
     _rewardedAd = [[MATRewardedVideoAd alloc] initWithPlacementID:adUnit];
     _rewardedAd.delegate = self;
     [_rewardedAd loadAd];
+    [MaticooMediationTrackManager trackMediationAdRequest:adUnit adType:REWARDEDVIDEO isAutoRefresh:NO];
 }
 
 #pragma mark GADMediationRewardedAd implementation
@@ -93,6 +97,7 @@
 - (void)presentFromViewController:(nonnull UIViewController *)viewController {
     if (_rewardedAd && _rewardedAd.isReady){
         [_rewardedAd showAdFromViewController:viewController];
+        [MaticooMediationTrackManager trackMediationAdShow:_rewardedAd.placementID adType:REWARDEDVIDEO];
     }
 }
 
@@ -100,6 +105,7 @@
 
 - (void)rewardedVideoAdDidLoad:(MATRewardedVideoAd *)rewardedVideoAd{
     _adEventDelegate = _loadCompletionHandler(self, nil);
+    [MaticooMediationTrackManager trackMediationAdRequestFilled:rewardedVideoAd.placementID adType:REWARDEDVIDEO];
 }
 
 - (void)rewardedVideoAdWillClose:(MATRewardedVideoAd *)rewardedVideoAd{
@@ -112,10 +118,12 @@
 
 - (void)rewardedVideoAd:(MATRewardedVideoAd *)rewardedVideoAd didFailWithError:(NSError *)error{
     _adEventDelegate = _loadCompletionHandler(nil, error);
+    [MaticooMediationTrackManager trackMediationAdRequestFailed:rewardedVideoAd.placementID adType:REWARDEDVIDEO];
 }
 
 - (void)rewardedVideoAdWillLogImpression:(MATRewardedVideoAd *)rewardedVideoAd {
     [_adEventDelegate willPresentFullScreenView];
+    [MaticooMediationTrackManager trackMediationAdImp:rewardedVideoAd.placementID adType:REWARDEDVIDEO];
 }
 
 - (void)rewardedVideoAdStarted:(MATRewardedVideoAd *)rewardedVideoAd{
@@ -124,6 +132,7 @@
 
 - (void)rewardedVideoAdDidClick:(MATRewardedVideoAd *)rewardedVideoAd{
     [_adEventDelegate reportClick];
+    [MaticooMediationTrackManager trackMediationAdClick:rewardedVideoAd.placementID adType:REWARDEDVIDEO];
 }
 
 - (void)rewardedVideoAdCompleted:(MATRewardedVideoAd *)rewardedVideoAd{
@@ -132,6 +141,11 @@
 
 - (void)rewardedVideoAdReward:(MATRewardedVideoAd *)rewardedVideoAd {
   [_adEventDelegate didRewardUser];
+}
+
+- (void)rewardedVideoAd:(MATRewardedVideoAd *)rewardedVideoAd displayFailWithError:(NSError *)error{
+    [_adEventDelegate didFailToPresentWithError:error];
+    [MaticooMediationTrackManager trackMediationAdImpFailed:rewardedVideoAd.placementID adType:INTERSTITIAL];
 }
 
 @end
